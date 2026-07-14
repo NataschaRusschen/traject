@@ -178,6 +178,14 @@
     line-height: 1.2; margin-bottom: 2.5rem; color: var(--blauw);
   }
 
+
+  .aanpak-grid { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 2rem; align-items: start; }
+  .aanpak-tekst p { margin-bottom: 1rem; font-size: 16px; color: #444; }
+  .bewijs-kaart { background: var(--lichtblauw-bg); border: 1px solid var(--lichtblauw-mid); border-radius: var(--radius); padding: 1.5rem; }
+  .bewijs-kaart strong { display: block; color: var(--blauw); font-family: 'Raleway', sans-serif; margin-bottom: 0.5rem; }
+  .bewijs-kaart p { font-size: 14px; color: #444; line-height: 1.6; }
+  .tarieven-intro { max-width: 780px; margin-top: -1.25rem; margin-bottom: 2rem; color: #444; }
+
   /* FASEN — alle nummers blauw */
   .fasen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
   .fase-kaart {
@@ -347,6 +355,7 @@
     .fasen-grid { grid-template-columns: 1fr; }
     .st-kaart { grid-template-columns: 1fr; }
     .tarieven-grid { grid-template-columns: 1fr; }
+    .aanpak-grid { grid-template-columns: 1fr; }
   }
   @media (prefers-reduced-motion: reduce) {
     .teller-ring::before { animation: none; }
@@ -363,9 +372,9 @@
 <!-- HERO -->
 <section class="hero">
   <div>
-    <span class="eyebrow">Arboveiligheid voor MKB en scholen</span>
-    <h1>Een werkende veiligheidsstructuur in <em>90 dagen</em></h1>
-    <p class="hero-sub">Geen dikke rapporten. Geen blijvende afhankelijkheid. In drie maanden staat er een praktische structuur die past bij jullie organisatie, en die blijft werken ook als ik vertrek.</p>
+    <span class="eyebrow">Voor MKB en scholen in Groningen en omgeving</span>
+    <h1>Veiligheid goed geregeld in <em>90 dagen</em></h1>
+    <p class="hero-sub">Geen dikke rapporten en geen blijvende afhankelijkheid van een externe veiligheidskundige. In drie maanden staat er een praktische veiligheidsstructuur die past bij jullie organisatie en blijft werken als ik vertrek.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Plan een kennismaking</a>
       <a href="#traject" class="btn-ghost">Hoe het werkt ↓</a>
@@ -379,7 +388,7 @@
     <div class="teller-pills">
       <div class="teller-pill"><div class="pill-dot"></div>Vaste prijs, geen urenklok</div>
       <div class="teller-pill"><div class="pill-dot"></div>Groningen en omgeving</div>
-      <div class="teller-pill"><div class="pill-dot"></div>MKB 10–50 medewerkers en scholen</div>
+      <div class="teller-pill"><div class="pill-dot"></div>Klein MKB en scholen</div>
     </div>
   </div>
 </section>
@@ -396,7 +405,7 @@
         <div class="voor-item"><div class="voor-dot">✕</div><span>De preventiemedewerker weet niet precies wat hij moet doen</span></div>
         <div class="voor-item"><div class="voor-dot">✕</div><span>Meldingen worden niet goed opgevolgd</span></div>
         <div class="voor-item"><div class="voor-dot">✕</div><span>Alles hangt af van één persoon</span></div>
-        <div class="voor-item"><div class="voor-dot">✕</div><span>De Arbeidsinspectie kan morgen binnenlopen</span></div>
+        <div class="voor-item"><div class="voor-dot">✕</div><span>Bij een inspectie moet alles nog bij elkaar worden gezocht</span></div>
       </div>
       <div class="voorna-pijl">
         <div class="pijl-cirkel">
@@ -410,8 +419,24 @@
         <div class="na-item"><div class="na-dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><span>Preventiemedewerker zelfstandig verder</span></div>
         <div class="na-item"><div class="na-dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><span>Meldingen eenvoudig gedaan en opgevolgd</span></div>
         <div class="na-item"><div class="na-dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><span>Alle informatie op één logische plek</span></div>
-        <div class="na-item"><div class="na-dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><span>Klaar voor Arbeidsinspectie, RI&amp;E, NEN of VCA</span></div>
+        <div class="na-item"><div class="na-dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><span>Een goede basis voor de RI&amp;E, inspecties, NEN en VCA</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- AANPAK -->
+<section class="sectie">
+  <p class="sectie-eyebrow">Praktisch en op maat</p>
+  <h2 class="sectie-titel">Ik begin niet met een standaard handboek</h2>
+  <div class="aanpak-grid">
+    <div class="aanpak-tekst">
+      <p>Ik haal eerst op wat er al is: documenten, afspraken, registraties, overlegmomenten en informatie die nu verspreid staat. Dat breng ik bij elkaar tot één duidelijke structuur.</p>
+      <p>Alleen wat ontbreekt of echt beter moet, vul ik aan. Geen extra regels omdat het kan, maar wat nodig is om veiligheid praktisch te organiseren en over te dragen.</p>
+    </div>
+    <div class="bewijs-kaart">
+      <strong>Gebouwd in de praktijk</strong>
+      <p>Deze aanpak komt uit mijn interimwerk bij organisaties waar veiligheid versnipperd was geregeld. De Nederlandse Arbeidsinspectie reageerde positief op de overzichtelijke structuur en inhoud.</p>
     </div>
   </div>
 </section>
@@ -461,11 +486,11 @@
 <section class="sectie-lichtgrijs">
   <div class="sectie-inner">
     <p class="sectie-eyebrow">Wat je krijgt</p>
-    <h2 class="sectie-titel">Concreet resultaat, geen papier</h2>
+    <h2 class="sectie-titel">Geen extra papier. Wel een structuur die werkt.</h2>
     <div class="resultaat-grid">
       <div class="resultaat-item">
         <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
-        <h4>Veiligheidsstructuur</h4><p>Overzichtelijk, passend bij jullie organisatie en maat.</p>
+        <h4>Veiligheidsstructuur</h4><p>Overzichtelijk, passend bij jullie organisatie en niet groter dan nodig.</p>
       </div>
       <div class="resultaat-item">
         <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
@@ -477,7 +502,7 @@
       </div>
       <div class="resultaat-item">
         <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg></div>
-        <h4>Meldproces en actielijst</h4><p>Meldingen gedaan, bijgehouden en opgevolgd, digitaal.</p>
+        <h4>Meldproces en actielijst</h4><p>Meldingen kunnen eenvoudig worden gedaan, verdeeld en opgevolgd.</p>
       </div>
       <div class="resultaat-item">
         <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
@@ -493,7 +518,7 @@
       </div>
       <div class="resultaat-item">
         <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg></div>
-        <h4>Alles op één plek</h4><p>Digitaal archief in Safety Triggers, toegankelijk voor iedereen.</p>
+        <h4>Alles op één logische plek</h4><p>De juiste informatie is vindbaar voor MT, medewerkers en derden.</p>
       </div>
     </div>
   </div>
@@ -503,15 +528,15 @@
 <section class="st-blok">
   <div class="st-kaart">
     <div>
-      <p class="st-eyebrow">Inclusief in het traject</p>
-      <h2>De structuur <em>leeft</em> in Safety Triggers</h2>
-      <p>Alle meldingen, toolboxen, overleggen en documenten komen op één digitale plek. Ik richt het dashboard volledig in als onderdeel van het traject. De eerste drie maanden van het abonnement zijn inbegrepen.</p>
+      <p class="st-eyebrow">Het gereedschap bij de structuur</p>
+      <h2>De structuur wordt praktisch vastgelegd in <em>Safety Triggers</em></h2>
+      <p>De structuur staat niet alleen in documenten. Ik richt Safety Triggers in als praktische werkplek voor meldingen, acties, toolboxen, overleggen, planning en veiligheidsinformatie. De eerste drie maanden zijn inbegrepen. Daarna kiezen jullie zelf of je ermee doorgaat.</p>
       <ul class="st-features">
         <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Meldingen, acties en opvolging</li>
         <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Toolboxen met aftekenlijsten</li>
         <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Planning en agenda voor het team</li>
         <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Veiligheidsarchief op één plek</li>
-        <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Daarna vanaf €60 pm, jullie draaien het zelf</li>
+        <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Na afloop vanaf €60 per maand, zonder verplichting</li>
       </ul>
     </div>
     <div class="st-visual">
@@ -534,7 +559,8 @@
 <section class="sectie-lichtgrijs" id="tarieven">
   <div class="sectie-inner">
     <p class="sectie-eyebrow">Investering</p>
-    <h2 class="sectie-titel">Vaste prijs, geen verrassingen</h2>
+    <h2 class="sectie-titel">Vooraf duidelijk wat het kost en wat je krijgt</h2>
+    <p class="tarieven-intro">Gedurende twaalf weken haal ik op wat er al is, orden ik de informatie, maak ik wat ontbreekt en richt ik de praktische werkwijze in. Ik ben meerdere dagdelen op locatie en werk tussendoor aan de documenten, formats en inrichting. Aan het einde kan de organisatie zelfstandig verder.</p>
     <div class="tarieven-grid">
       <div class="tarief-kaart">
         <div class="tarief-name">Basistraject</div>
@@ -549,22 +575,22 @@
         </ul>
       </div>
       <div class="tarief-kaart uitgelicht">
-        <div class="tarief-badge">Meest compleet</div>
+        <div class="tarief-badge">Inclusief opleiding</div>
         <div class="tarief-name">Compleet traject</div>
         <div class="tarief-prijs">€7.500 <span>excl. btw</span></div>
         <div class="tarief-sub">Inclusief praktijktraining preventiemedewerker</div>
         <ul class="tarief-items">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Alles uit het basistraject</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Praktijktraining preventiemedewerker (8 uur op locatie)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Klaar voor RI&amp;E, NEN of VCA traject</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Goede basis voor RI&amp;E, inspecties, NEN en VCA</li>
         </ul>
       </div>
       <div class="tarief-kaart">
         <div class="tarief-name">Nazorg</div>
         <div class="tarief-prijs">€275 <span>/maand</span></div>
-        <div class="tarief-sub">Optioneel na afloop</div>
+        <div class="tarief-sub">Optioneel na de overdracht</div>
         <ul class="tarief-items">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Beschikbaarheid op afroep</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Vaste sparringpartner op afroep</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Kleine updates en vragen</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Jaarlijkse veiligheidscheck €650</li>
         </ul>
@@ -582,8 +608,8 @@
     <div class="module-kaart"><h4>Praktijktraining preventiemedewerker</h4><p>Geen theoriecursus, maar begeleiding binnen de eigen organisatie op locatie.</p></div>
     <div class="module-kaart"><h4>Toolboxen en communicatie</h4><p>Toolboxbibliotheek, narrowcasting, veiligheidscommunicatie op maat.</p></div>
     <div class="module-kaart"><h4>Registraties en beheer</h4><p>PBM, arbeidsmiddelen, gevaarlijke stoffen en keuringoverzicht.</p></div>
-    <div class="module-kaart"><h4>Voorbereiding VCA of ISO</h4><p>Structuur en documentatie als basis voor certificering.</p></div>
-    <div class="module-kaart"><h4>Arbeidsinspectietraject</h4><p>Voorbereiden (her)inspectie en ongevalsonderzoek.</p></div>
+    <div class="module-kaart"><h4>Voorbereiding VCA of ISO</h4><p>Aanvullende ondersteuning bij de voorbereiding. Een volledig certificeringstraject valt buiten het basistraject.</p></div>
+    <div class="module-kaart"><h4>Arbeidsinspectietraject</h4><p>Extra ondersteuning bij een inspectie, herinspectie of ongevalsonderzoek.</p></div>
     <div class="module-kaart"><h4>Jaarlijkse veiligheidscheck</h4><p>Halve dag op locatie, korte review van de structuur en een adviesrapport.</p></div>
   </div>
 </section>
@@ -591,14 +617,14 @@
 <!-- NIET INBEGREPEN -->
 <div class="niet">
   <div class="niet-inner">
-    <p><strong>Niet inbegrepen:</strong> RI&amp;E uitvoering, RI&amp;E toetsing, certificeringstrajecten, juridische ondersteuning en machinekeuringen. Hiervoor verwijs ik door naar geschikte partners.</p>
+    <p><strong>Niet inbegrepen:</strong> het uitvoeren of toetsen van de RI&amp;E, volledige VCA- of ISO-certificeringstrajecten, juridische ondersteuning en machinekeuringen. Ondersteuning bij een Arbeidsinspectietraject valt buiten de vaste prijs en kan op basis van extra uren. Waar nodig verwijs ik door naar een geschikte specialist.</p>
   </div>
 </div>
 
 <!-- CTA -->
 <section class="cta-sectie" id="contact">
   <h2>Klaar om te starten?</h2>
-  <p>30 minuten kennismaken — online of op locatie in Groningen. Geen verplichtingen.</p>
+  <p>In 30 minuten bespreken we wat er al staat, waar het nu vastloopt en of dit traject past. Online of op locatie in Groningen.</p>
   <div class="cta-knoppen">
     <a href="https://calendly.com/natascha-nrdoet/online-afspraak-30-minuten" class="btn-white">Plan een online afspraak</a>
     <a href="https://calendly.com/natascha-nrdoet/15min" class="btn-wit-lijn">Belafspraak inplannen</a>
@@ -607,7 +633,7 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 NRdoet &nbsp;·&nbsp; <a href="https://www.nrdoet.nl">nrdoet.nl</a> &nbsp;·&nbsp; <a href="https://www.safetytriggers.nl">safetytriggers.nl</a></p>
+  <p>&copy; 2026 NRdoet &nbsp;·&nbsp; <a href="https://www.nrdoet.nl">nrdoet.nl</a> &nbsp;·&nbsp; <a href="https://www.safetytriggers.nl">safetytriggers.nl</a></p>
 </footer>
 
 <script>
