@@ -6,286 +6,259 @@
 <title>Veiligheidsstructuur in 90 dagen — NRdoet</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --orange: #ff914b;
-    --orange-light: #fff2ea;
-    --green: #008037;
-    --green-light: #e8f5ee;
-    --dark: #141414;
-    --mid: #555;
-    --light: #f7f7f5;
-    --border: #e8e8e4;
-    --white: #ffffff;
+    --blauw: #004aad;
+    --oranje: #ff914b;
+    --lichtblauw: #8fc3ea;
+    --lichtblauw-bg: #eaf4fb;
+    --donker: #141414;
+    --wit: #ffffff;
+    --lichtgrijs: #f5f7fa;
+    --border: #dde6f0;
     --radius: 12px;
   }
 
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     font-size: 16px;
-    color: var(--dark);
-    background: var(--white);
+    color: var(--donker);
+    background: var(--wit);
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, nav, .btn-primary, .btn-white, .nav-cta, .eyebrow, .tarief-name, .module-price, .fase-weeks {
+    font-family: 'Raleway', sans-serif;
   }
 
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 0 2rem;
-    height: 60px;
+    height: 64px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .nav-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 18px; color: var(--dark); text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 20px; color: var(--blauw); text-decoration: none;
   }
-  .nav-logo span { color: var(--orange); }
+  .nav-logo span { color: var(--oranje); }
   .nav-cta {
-    background: var(--orange); color: white;
+    background: var(--oranje); color: white;
     border: none; border-radius: 6px;
-    padding: 8px 18px; font-size: 14px; font-weight: 500;
-    cursor: pointer; font-family: 'Inter', sans-serif;
-    text-decoration: none;
+    padding: 10px 20px; font-size: 14px; font-weight: 700;
+    cursor: pointer;
+    text-decoration: none; display: inline-block;
   }
+  .nav-cta:hover { opacity: 0.88; }
 
   /* HERO */
   .hero {
-    padding: 140px 2rem 80px;
+    padding: 130px 2rem 80px;
     max-width: 1100px; margin: 0 auto;
     display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
   }
-  .hero-label {
+  .eyebrow {
     display: inline-block;
     font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--orange); font-weight: 600;
-    margin-bottom: 1.25rem;
+    color: var(--oranje); font-weight: 700;
+    margin-bottom: 1rem;
   }
   .hero h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(36px, 5vw, 54px);
-    line-height: 1.1;
-    color: var(--dark);
-    margin-bottom: 1.5rem;
+    font-size: clamp(32px, 5vw, 42px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--blauw);
+    margin-bottom: 1.25rem;
   }
-  .hero h1 em { font-style: italic; color: var(--orange); }
+  .hero h1 em { font-style: normal; color: var(--oranje); }
   .hero-sub {
-    font-size: 17px; color: var(--mid); line-height: 1.7;
-    margin-bottom: 2rem; max-width: 440px;
+    font-size: 17px; color: #333; line-height: 1.7;
+    margin-bottom: 2rem;
   }
   .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
   .btn-primary {
-    background: var(--orange); color: white;
+    background: var(--oranje); color: white;
     border: none; border-radius: 8px;
-    padding: 14px 28px; font-size: 15px; font-weight: 500;
-    cursor: pointer; font-family: 'Inter', sans-serif;
+    padding: 14px 28px; font-size: 15px; font-weight: 700;
+    cursor: pointer;
     text-decoration: none; display: inline-block;
     transition: opacity 0.2s;
   }
   .btn-primary:hover { opacity: 0.88; }
   .btn-ghost {
-    color: var(--mid); font-size: 14px; text-decoration: none;
-    display: flex; align-items: center; gap: 6px;
+    color: var(--blauw); font-size: 15px; text-decoration: none; font-weight: 700;
   }
-  .btn-ghost:hover { color: var(--dark); }
+  .btn-ghost:hover { color: var(--oranje); }
 
-  /* HERO COUNTER */
-  .hero-counter {
-    text-align: center;
-    position: relative;
-  }
-  .counter-ring {
+  /* HERO TELLER */
+  .hero-teller { text-align: center; }
+  .teller-ring {
     width: 280px; height: 280px;
     border-radius: 50%;
-    background: var(--light);
+    background: var(--lichtblauw-bg);
+    border: 2px solid var(--lichtblauw);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     margin: 0 auto;
     position: relative;
-    border: 2px solid var(--border);
   }
-  .counter-ring::before {
+  .teller-ring::before {
     content: '';
-    position: absolute; inset: -8px;
+    position: absolute; inset: -10px;
     border-radius: 50%;
-    border: 2px dashed var(--orange);
-    opacity: 0.3;
+    border: 2px dashed var(--oranje);
+    opacity: 0.4;
     animation: spin 30s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .counter-num {
-    font-family: 'DM Serif Display', serif;
+  .teller-num {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     font-size: 96px; line-height: 1;
-    color: var(--dark);
+    color: var(--blauw);
   }
-  .counter-unit {
-    font-size: 13px; color: var(--mid); letter-spacing: 0.06em; text-transform: uppercase;
-    margin-top: 4px;
+  .teller-unit {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px; color: var(--blauw); letter-spacing: 0.08em; text-transform: uppercase;
+    margin-top: 4px; font-weight: 700;
   }
-  .counter-pills {
+  .teller-pills {
     display: flex; flex-direction: column; gap: 8px;
     margin-top: 1.5rem;
   }
-  .counter-pill {
+  .teller-pill {
     display: flex; align-items: center; gap: 8px;
-    font-size: 13px; color: var(--mid);
+    font-size: 13px; color: #444;
     background: white; border: 1px solid var(--border);
-    border-radius: 99px; padding: 6px 14px;
+    border-radius: 99px; padding: 6px 16px;
     width: fit-content; margin: 0 auto;
   }
-  .counter-pill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
+  .pill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--oranje); flex-shrink: 0; }
 
   /* VOOR/NA */
   .voorna {
-    background: var(--dark);
+    background: var(--blauw);
     padding: 80px 2rem;
   }
-  .voorna-inner {
-    max-width: 1100px; margin: 0 auto;
-  }
+  .voorna-inner { max-width: 1100px; margin: 0 auto; }
   .voorna-label {
+    font-family: 'Raleway', sans-serif;
     font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: rgba(255,255,255,0.4); margin-bottom: 2rem; text-align: center;
+    color: var(--lichtblauw); margin-bottom: 2rem; text-align: center; font-weight: 700;
   }
   .voorna-grid {
     display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; align-items: start;
   }
   .voorna-col h3 {
     font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-    margin-bottom: 1.25rem; font-weight: 500;
+    margin-bottom: 1.25rem; font-weight: 700;
   }
-  .voor h3 { color: rgba(255,255,255,0.35); }
-  .na h3 { color: var(--green); }
+  .voor h3 { color: var(--lichtblauw); opacity: 0.6; }
+  .na h3 { color: var(--oranje); }
   .voor-item, .na-item {
     display: flex; gap: 10px; align-items: flex-start;
     margin-bottom: 10px;
   }
   .voor-dot {
-    width: 20px; height: 20px; border-radius: 50%;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
+    width: 22px; height: 22px; border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
     flex-shrink: 0; margin-top: 1px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 10px; color: rgba(255,255,255,0.2);
+    font-size: 11px; color: rgba(255,255,255,0.4);
   }
   .na-dot {
-    width: 20px; height: 20px; border-radius: 50%;
-    background: var(--green); flex-shrink: 0; margin-top: 1px;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--oranje); flex-shrink: 0; margin-top: 1px;
     display: flex; align-items: center; justify-content: center;
   }
-  .na-dot svg { width: 10px; height: 10px; }
-  .voor-item span { font-size: 14px; color: rgba(255,255,255,0.35); line-height: 1.5; }
-  .na-item span { font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.5; }
-  .voorna-divider {
+  .na-dot svg { width: 11px; height: 11px; }
+  .voor-item span { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+  .na-item span { font-size: 15px; color: #ffffff; line-height: 1.5; }
+  .voorna-pijl {
     display: flex; align-items: center; justify-content: center;
-    padding-top: 32px;
+    padding-top: 28px;
   }
-  .arrow-circle {
+  .pijl-cirkel {
     width: 44px; height: 44px; border-radius: 50%;
-    background: var(--orange);
+    background: var(--oranje);
     display: flex; align-items: center; justify-content: center;
   }
-  .arrow-circle svg { width: 18px; height: 18px; color: white; }
+  .pijl-cirkel svg { width: 18px; height: 18px; color: white; }
 
-  /* TRAJECT */
-  .traject {
-    padding: 80px 2rem;
-    max-width: 1100px; margin: 0 auto;
-  }
-  .section-eyebrow {
+  /* SECTIES */
+  .sectie { padding: 80px 2rem; max-width: 1100px; margin: 0 auto; }
+  .sectie-lichtgrijs { background: var(--lichtgrijs); padding: 80px 2rem; }
+  .sectie-lichtgrijs .sectie-inner { max-width: 1100px; margin: 0 auto; }
+
+  .sectie-eyebrow {
+    font-family: 'Raleway', sans-serif;
     font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--orange); font-weight: 600; margin-bottom: 0.75rem;
+    color: var(--oranje); font-weight: 700; margin-bottom: 0.75rem;
   }
-  .section-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(28px, 4vw, 40px);
-    line-height: 1.2; margin-bottom: 3rem; color: var(--dark);
+  .sectie-titel {
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 700;
+    line-height: 1.2; margin-bottom: 2.5rem; color: var(--blauw);
   }
 
-  /* TIJDLIJN */
-  .timeline {
-    position: relative;
-    padding-top: 2rem;
+  /* FASEN */
+  .fasen-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
-  .timeline-track {
-    position: absolute;
-    top: 48px; left: 24px; right: 24px;
-    height: 2px; background: var(--border);
-  }
-  .timeline-progress {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to right, var(--orange), var(--green));
-    transform-origin: left;
-    animation: growline 1.5s ease-out 0.5s both;
-  }
-  @keyframes growline { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-
-  .timeline-phases {
-    display: grid; grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem; position: relative;
-  }
-  .phase-card {
-    background: var(--white);
+  .fase-kaart {
+    background: white;
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 1.5rem;
+    padding: 1.75rem;
     transition: box-shadow 0.2s;
   }
-  .phase-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
-  .phase-num-wrap {
+  .fase-kaart:hover { box-shadow: 0 8px 32px rgba(0,74,173,0.1); }
+  .fase-num-wrap {
     display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem;
   }
-  .phase-num {
+  .fase-num {
     width: 48px; height: 48px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'DM Serif Display', serif;
-    font-size: 20px; flex-shrink: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px; font-weight: 700; flex-shrink: 0;
   }
-  .phase-1 .phase-num { background: var(--orange-light); color: var(--orange); }
-  .phase-2 .phase-num { background: #f0f7ff; color: #2563eb; }
-  .phase-3 .phase-num { background: var(--green-light); color: var(--green); }
-  .phase-weeks {
-    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--mid); font-weight: 500;
+  .fase-1 .fase-num { background: var(--lichtblauw-bg); color: var(--blauw); }
+  .fase-2 .fase-num { background: #fff2ea; color: var(--oranje); }
+  .fase-3 .fase-num { background: var(--lichtblauw-bg); color: var(--blauw); }
+  .fase-weeks {
+    font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: #666; font-weight: 700;
   }
-  .phase-title-text {
-    font-size: 16px; font-weight: 600; margin-bottom: 0.75rem; color: var(--dark);
+  .fase-titel {
+    font-size: 17px; font-weight: 700; margin-bottom: 1rem; color: var(--blauw);
   }
-  .phase-items { list-style: none; }
-  .phase-items li {
-    font-size: 13px; color: var(--mid);
+  .fase-items { list-style: none; }
+  .fase-items li {
+    font-size: 14px; color: #333;
     padding: 4px 0;
     display: flex; gap: 8px; align-items: flex-start; line-height: 1.5;
   }
-  .phase-items li::before {
-    content: '—'; color: var(--border); flex-shrink: 0; margin-top: 1px;
+  .fase-items li::before {
+    content: '—'; color: var(--lichtblauw); flex-shrink: 0; margin-top: 1px;
   }
-  .phase-uren {
-    margin-top: 1rem; padding-top: 1rem;
-    border-top: 1px solid var(--border);
-    display: flex; gap: 1rem;
-  }
-  .uren-stat { font-size: 12px; color: var(--mid); }
-  .uren-stat strong { display: block; font-size: 16px; font-weight: 600; color: var(--dark); }
 
-  /* WAT JE KRIJGT */
-  .resultaat {
-    background: var(--light);
-    padding: 80px 2rem;
-  }
-  .resultaat-inner { max-width: 1100px; margin: 0 auto; }
+  /* RESULTAAT */
   .resultaat-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px; margin-top: 2rem;
+    gap: 12px;
   }
   .resultaat-item {
     background: white;
@@ -294,181 +267,177 @@
     padding: 1.25rem;
     display: flex; flex-direction: column; gap: 8px;
   }
-  .resultaat-icon {
+  .resultaat-icoon {
     width: 36px; height: 36px; border-radius: 8px;
-    background: var(--orange-light);
+    background: var(--lichtblauw-bg);
     display: flex; align-items: center; justify-content: center;
   }
-  .resultaat-icon svg { width: 18px; height: 18px; color: var(--orange); }
-  .resultaat-item h4 { font-size: 14px; font-weight: 600; color: var(--dark); }
-  .resultaat-item p { font-size: 13px; color: var(--mid); line-height: 1.5; }
+  .resultaat-icoon svg { width: 18px; height: 18px; color: var(--blauw); }
+  .resultaat-item h4 { font-size: 14px; font-weight: 700; color: var(--blauw); font-family: 'Raleway', sans-serif; }
+  .resultaat-item p { font-size: 13px; color: #444; line-height: 1.5; }
 
-  /* ST BLOK */
-  .st-blok {
-    padding: 80px 2rem;
-    max-width: 1100px; margin: 0 auto;
-  }
-  .st-card {
-    background: var(--dark);
+  /* SAFETY TRIGGERS BLOK */
+  .st-blok { padding: 80px 2rem; max-width: 1100px; margin: 0 auto; }
+  .st-kaart {
+    background: var(--blauw);
     border-radius: 20px;
     padding: 3rem;
     display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
   }
-  .st-card h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(24px, 3vw, 36px);
+  .st-kaart h2 {
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 700;
     color: white; line-height: 1.2; margin-bottom: 1rem;
   }
-  .st-card h2 em { font-style: italic; color: var(--orange); }
-  .st-card p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
-  .st-features { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .st-kaart h2 em { font-style: normal; color: var(--oranje); }
+  .st-kaart p { font-size: 15px; color: #ffffff; line-height: 1.7; margin-bottom: 1.5rem; }
+  .st-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .st-features li {
     display: flex; gap: 10px; align-items: center;
-    font-size: 14px; color: rgba(255,255,255,0.8);
+    font-size: 15px; color: #ffffff;
   }
-  .st-check {
-    width: 20px; height: 20px; border-radius: 50%;
-    background: var(--green); flex-shrink: 0;
+  .st-vinkje {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--oranje); flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
   }
-  .st-check svg { width: 10px; height: 10px; }
+  .st-vinkje svg { width: 11px; height: 11px; }
   .st-visual {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 12px;
     padding: 1.5rem;
   }
   .st-module {
     display: flex; align-items: center; gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
   .st-module:last-child { border-bottom: none; }
-  .st-module-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
-  .st-module-name { font-size: 13px; color: rgba(255,255,255,0.7); }
+  .st-module-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--oranje); flex-shrink: 0; }
+  .st-module-naam { font-size: 14px; color: #ffffff; }
   .st-module-tag {
     margin-left: auto; font-size: 11px;
-    background: rgba(255,255,255,0.08);
-    color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.15);
+    color: #ffffff;
     padding: 2px 8px; border-radius: 99px;
+    font-family: 'Raleway', sans-serif; font-weight: 700;
   }
 
   /* TARIEVEN */
-  .tarieven {
-    padding: 80px 2rem;
-    background: var(--light);
-  }
-  .tarieven-inner { max-width: 1100px; margin: 0 auto; }
   .tarieven-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px; margin-top: 2rem;
+    gap: 16px;
   }
-  .tarief-card {
+  .tarief-kaart {
     background: white; border: 1px solid var(--border);
     border-radius: var(--radius); padding: 1.75rem;
     display: flex; flex-direction: column;
   }
-  .tarief-card.featured {
-    border: 2px solid var(--orange);
+  .tarief-kaart.uitgelicht {
+    border: 2px solid var(--oranje);
     position: relative;
   }
   .tarief-badge {
-    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-    background: var(--orange); color: white;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
-    padding: 4px 14px; border-radius: 99px; white-space: nowrap;
+    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+    background: var(--oranje); color: white;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.06em; font-family: 'Raleway', sans-serif;
+    padding: 4px 16px; border-radius: 99px; white-space: nowrap;
   }
-  .tarief-name { font-size: 14px; color: var(--mid); margin-bottom: 0.5rem; }
-  .tarief-price {
-    font-family: 'DM Serif Display', serif;
-    font-size: 36px; color: var(--dark); line-height: 1;
+  .tarief-name { font-size: 14px; color: #666; margin-bottom: 0.5rem; font-weight: 700; }
+  .tarief-prijs {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px; font-weight: 700; color: var(--blauw); line-height: 1;
     margin-bottom: 4px;
   }
-  .tarief-price span { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--mid); font-weight: 400; }
-  .tarief-sub { font-size: 12px; color: var(--mid); margin-bottom: 1.25rem; }
+  .tarief-prijs span { font-size: 14px; color: #666; font-weight: 400; font-family: 'Trebuchet MS', sans-serif; }
+  .tarief-sub { font-size: 13px; color: #666; margin-bottom: 1.25rem; }
   .tarief-items { list-style: none; flex: 1; margin-bottom: 1.25rem; }
   .tarief-items li {
     display: flex; gap: 8px; align-items: flex-start;
-    font-size: 13px; color: var(--mid); padding: 4px 0; line-height: 1.5;
+    font-size: 14px; color: #333; padding: 5px 0; line-height: 1.5;
   }
-  .tarief-items li svg { width: 14px; height: 14px; color: var(--green); flex-shrink: 0; margin-top: 2px; }
+  .tarief-items li svg { width: 15px; height: 15px; color: var(--blauw); flex-shrink: 0; margin-top: 2px; }
 
   /* MODULES */
-  .modules { padding: 80px 2rem; max-width: 1100px; margin: 0 auto; }
   .modules-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px; margin-top: 2rem;
+    gap: 12px;
   }
-  .module-card {
+  .module-kaart {
     border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 1.25rem;
+    padding: 1.25rem; background: white;
   }
-  .module-card h4 { font-size: 14px; font-weight: 600; color: var(--dark); margin-bottom: 4px; }
-  .module-card p { font-size: 13px; color: var(--mid); line-height: 1.5; margin-bottom: 0.75rem; }
-  .module-price { font-size: 13px; font-weight: 500; color: var(--orange); }
+  .module-kaart h4 { font-size: 15px; font-weight: 700; color: var(--blauw); margin-bottom: 6px; font-family: 'Raleway', sans-serif; }
+  .module-kaart p { font-size: 13px; color: #444; line-height: 1.5; margin-bottom: 0.75rem; }
+  .module-price { font-size: 14px; font-weight: 700; color: var(--oranje); font-family: 'Raleway', sans-serif; }
 
   /* NIET INBEGREPEN */
-  .niet {
-    max-width: 1100px; margin: 0 auto;
-    padding: 0 2rem 80px;
-  }
+  .niet { max-width: 1100px; margin: 0 auto; padding: 0 2rem 80px; }
   .niet-inner {
-    background: var(--light); border-radius: var(--radius);
+    background: var(--lichtgrijs); border-radius: var(--radius);
     padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;
+    border-left: 4px solid var(--lichtblauw);
   }
-  .niet-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
-  .niet-inner p { font-size: 14px; color: var(--mid); line-height: 1.7; }
-  .niet-inner strong { color: var(--dark); font-weight: 500; }
+  .niet-inner p { font-size: 14px; color: #444; line-height: 1.7; }
+  .niet-inner strong { color: var(--blauw); font-weight: 700; }
 
   /* CTA */
   .cta-sectie {
-    background: var(--orange);
+    background: var(--oranje);
     padding: 80px 2rem;
     text-align: center;
   }
   .cta-sectie h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(28px, 4vw, 44px);
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 700;
     color: white; margin-bottom: 1rem; line-height: 1.2;
   }
-  .cta-sectie p { font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 2rem; }
+  .cta-sectie p { font-size: 16px; color: rgba(255,255,255,0.9); margin-bottom: 2rem; }
   .btn-white {
-    background: white; color: var(--orange);
+    background: white; color: var(--oranje);
     border: none; border-radius: 8px;
-    padding: 16px 36px; font-size: 16px; font-weight: 600;
-    cursor: pointer; font-family: 'Inter', sans-serif;
+    padding: 16px 36px; font-size: 16px; font-weight: 700;
+    cursor: pointer; font-family: 'Raleway', sans-serif;
     text-decoration: none; display: inline-block;
   }
-  .cta-meta { margin-top: 1rem; font-size: 13px; color: rgba(255,255,255,0.6); }
+  .cta-meta { margin-top: 1rem; font-size: 13px; color: rgba(255,255,255,0.75); }
+
+  /* FOOTER */
+  footer {
+    background: var(--blauw); color: rgba(255,255,255,0.6);
+    text-align: center; padding: 1.5rem 2rem;
+    font-size: 13px;
+  }
+  footer a { color: var(--lichtblauw); text-decoration: none; }
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
     .hero { grid-template-columns: 1fr; gap: 2rem; padding: 100px 1.25rem 60px; }
-    .hero-counter { display: none; }
+    .hero-teller { display: none; }
     .voorna-grid { grid-template-columns: 1fr; }
-    .voorna-divider { display: none; }
-    .timeline-track { display: none; }
-    .timeline-phases { grid-template-columns: 1fr; }
-    .st-card { grid-template-columns: 1fr; }
+    .voorna-pijl { display: none; }
+    .fasen-grid { grid-template-columns: 1fr; }
+    .st-kaart { grid-template-columns: 1fr; }
     .tarieven-grid { grid-template-columns: 1fr; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .counter-ring::before, .timeline-progress { animation: none; }
+    .teller-ring::before { animation: none; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">NR<span>doet</span></a>
+  <a href="https://www.nrdoet.nl" class="nav-logo">NR<span>doet.</span></a>
   <a href="#contact" class="nav-cta">Vrijblijvend kennismaken</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <span class="hero-label">Arboveiligheid voor MKB en scholen</span>
+  <div>
+    <span class="eyebrow">Arboveiligheid voor MKB en scholen</span>
     <h1>Een werkende veiligheidsstructuur in <em>90 dagen</em></h1>
     <p class="hero-sub">Geen dikke rapporten. Geen blijvende afhankelijkheid. In drie maanden staat er een praktische structuur die past bij jullie organisatie — en die blijft werken ook als ik vertrek.</p>
     <div class="hero-actions">
@@ -476,20 +445,20 @@
       <a href="#traject" class="btn-ghost">Hoe het werkt ↓</a>
     </div>
   </div>
-  <div class="hero-counter">
-    <div class="counter-ring">
-      <span class="counter-num" id="counter">0</span>
-      <span class="counter-unit">dagen</span>
+  <div class="hero-teller">
+    <div class="teller-ring">
+      <span class="teller-num" id="teller">0</span>
+      <span class="teller-unit">dagen</span>
     </div>
-    <div class="counter-pills">
-      <div class="counter-pill"><div class="counter-pill-dot"></div>Vaste prijs, geen urenklok</div>
-      <div class="counter-pill"><div class="counter-pill-dot"></div>Groningen en omgeving</div>
-      <div class="counter-pill"><div class="counter-pill-dot"></div>MKB 10–50 medewerkers en scholen</div>
+    <div class="teller-pills">
+      <div class="teller-pill"><div class="pill-dot"></div>Vaste prijs, geen urenklok</div>
+      <div class="teller-pill"><div class="pill-dot"></div>Groningen en omgeving</div>
+      <div class="teller-pill"><div class="pill-dot"></div>MKB 10–50 medewerkers en scholen</div>
     </div>
   </div>
 </section>
 
-<!-- VOOR / NA -->
+<!-- VOOR/NA -->
 <section class="voorna">
   <div class="voorna-inner">
     <p class="voorna-label">Herkenbaar?</p>
@@ -503,8 +472,8 @@
         <div class="voor-item"><div class="voor-dot">✕</div><span>Alles hangt af van één persoon</span></div>
         <div class="voor-item"><div class="voor-dot">✕</div><span>De Arbeidsinspectie kan morgen binnenlopen</span></div>
       </div>
-      <div class="voorna-divider">
-        <div class="arrow-circle">
+      <div class="voorna-pijl">
+        <div class="pijl-cirkel">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
       </div>
@@ -522,117 +491,99 @@
 </section>
 
 <!-- TRAJECT -->
-<section class="traject" id="traject">
-  <p class="section-eyebrow">Het traject</p>
-  <h2 class="section-title">Drie fasen, twaalf weken</h2>
-  <div class="timeline">
-    <div class="timeline-track"><div class="timeline-progress"></div></div>
-    <div class="timeline-phases">
-      <div class="phase-card phase-1">
-        <div class="phase-num-wrap">
-          <div class="phase-num">1</div>
-          <span class="phase-weeks">Weken 1–2</span>
-        </div>
-        <div class="phase-title-text">Ophalen en ordenen</div>
-        <ul class="phase-items">
-          <li>Intakegesprek met MT</li>
-          <li>Inventarisatie bestaande documenten, afspraken en werkwijzen</li>
-          <li>Rondgang locatie</li>
-          <li>Overzicht: wat is er al, wat ontbreekt</li>
-          <li>Aanpak en planning vastleggen</li>
-        </ul>
-        <div class="phase-uren">
-          <div class="uren-stat"><strong>5 uur</strong>locatie</div>
-          <div class="uren-stat"><strong>5 uur</strong>thuis</div>
-          <div class="uren-stat"><strong>10 uur</strong>totaal</div>
-        </div>
+<section class="sectie" id="traject">
+  <p class="sectie-eyebrow">Het traject</p>
+  <h2 class="sectie-titel">Drie fasen, twaalf weken</h2>
+  <div class="fasen-grid">
+    <div class="fase-kaart fase-1">
+      <div class="fase-num-wrap">
+        <div class="fase-num">1</div>
+        <span class="fase-weeks">Weken 1–2</span>
       </div>
-      <div class="phase-card phase-2">
-        <div class="phase-num-wrap">
-          <div class="phase-num">2</div>
-          <span class="phase-weeks">Weken 3–10</span>
-        </div>
-        <div class="phase-title-text">Bouwen en inrichten</div>
-        <ul class="phase-items">
-          <li>Rollen, taken en verantwoordelijkheden</li>
-          <li>Korte overlegstructuur en meldproces</li>
-          <li>Jaarplanning keuringen en veiligheid</li>
-          <li>Safety Triggers dashboard inrichten</li>
-          <li>Toolboxen, protocollen en formats op maat</li>
-          <li>Introductieprotocol nieuwe medewerkers</li>
-          <li>Begeleiding preventiemedewerker</li>
-        </ul>
-        <div class="phase-uren">
-          <div class="uren-stat"><strong>18 uur</strong>locatie</div>
-          <div class="uren-stat"><strong>16 uur</strong>thuis</div>
-          <div class="uren-stat"><strong>34 uur</strong>totaal</div>
-        </div>
+      <div class="fase-titel">Ophalen en ordenen</div>
+      <ul class="fase-items">
+        <li>Intakegesprek met MT</li>
+        <li>Inventarisatie bestaande documenten, afspraken en werkwijzen</li>
+        <li>Rondgang locatie</li>
+        <li>Overzicht: wat is er al, wat ontbreekt</li>
+        <li>Aanpak en planning vastleggen</li>
+      </ul>
+    </div>
+    <div class="fase-kaart fase-2">
+      <div class="fase-num-wrap">
+        <div class="fase-num">2</div>
+        <span class="fase-weeks">Weken 3–10</span>
       </div>
-      <div class="phase-card phase-3">
-        <div class="phase-num-wrap">
-          <div class="phase-num">3</div>
-          <span class="phase-weeks">Weken 11–12</span>
-        </div>
-        <div class="phase-title-text">Overdragen en borgen</div>
-        <ul class="phase-items">
-          <li>Overdrachtsoverleg MT en preventiemedewerker</li>
-          <li>Eindrapportage en overdachtsdocument</li>
-          <li>Alle informatie op één logische plek</li>
-          <li>Evaluatie en nazorgafspraken</li>
-        </ul>
-        <div class="phase-uren">
-          <div class="uren-stat"><strong>3 uur</strong>locatie</div>
-          <div class="uren-stat"><strong>3 uur</strong>thuis</div>
-          <div class="uren-stat"><strong>6 uur</strong>totaal</div>
-        </div>
+      <div class="fase-titel">Bouwen en inrichten</div>
+      <ul class="fase-items">
+        <li>Rollen, taken en verantwoordelijkheden</li>
+        <li>Korte overlegstructuur en meldproces</li>
+        <li>Jaarplanning keuringen en veiligheid</li>
+        <li>Safety Triggers dashboard inrichten</li>
+        <li>Toolboxen, protocollen en formats op maat</li>
+        <li>Introductieprotocol nieuwe medewerkers</li>
+        <li>Begeleiding preventiemedewerker</li>
+      </ul>
+    </div>
+    <div class="fase-kaart fase-3">
+      <div class="fase-num-wrap">
+        <div class="fase-num">3</div>
+        <span class="fase-weeks">Weken 11–12</span>
       </div>
+      <div class="fase-titel">Overdragen en borgen</div>
+      <ul class="fase-items">
+        <li>Overdrachtsoverleg MT en preventiemedewerker</li>
+        <li>Eindrapportage en overdachtsdocument</li>
+        <li>Alle informatie op één logische plek</li>
+        <li>Evaluatie en nazorgafspraken</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- WAT JE KRIJGT -->
-<section class="resultaat">
-  <div class="resultaat-inner">
-    <p class="section-eyebrow">Wat je krijgt</p>
-    <h2 class="section-title">Concreet resultaat, geen papier</h2>
+<!-- RESULTAAT -->
+<section class="sectie-lichtgrijs">
+  <div class="sectie-inner">
+    <p class="sectie-eyebrow">Wat je krijgt</p>
+    <h2 class="sectie-titel">Concreet resultaat, geen papier</h2>
     <div class="resultaat-grid">
       <div class="resultaat-item">
-        <div class="resultaat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+        <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
         <h4>Veiligheidsstructuur</h4>
         <p>Overzichtelijk, passend bij jullie organisatie en maat.</p>
       </div>
       <div class="resultaat-item">
-        <div class="resultaat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
         <h4>Rollen en verantwoordelijkheden</h4>
         <p>Iedereen weet wat van hem of haar verwacht wordt.</p>
       </div>
       <div class="resultaat-item">
-        <div class="resultaat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+        <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
         <h4>Overlegstructuur</h4>
         <p>Kort, relevant en gepland — niet meer vergaderen dan nodig.</p>
       </div>
       <div class="resultaat-item">
-        <div class="resultaat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg></div>
+        <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg></div>
         <h4>Meldproces en actielijst</h4>
         <p>Meldingen gedaan, bijgehouden en opgevolgd — digitaal.</p>
       </div>
       <div class="resultaat-item">
-        <div class="resultaat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+        <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
         <h4>Jaarplanning</h4>
         <p>Keuringen, overleggen en veiligheidszaken voor het jaar gepland.</p>
       </div>
       <div class="resultaat-item">
-        <div class="resultaat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
+        <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
         <h4>Toolboxen en formats</h4>
         <p>Praktische hulpmiddelen die de organisatie zelf kan gebruiken.</p>
       </div>
       <div class="resultaat-item">
-        <div class="resultaat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
         <h4>Preventiemedewerker begeleid</h4>
         <p>Klaar om zelfstandig verder te gaan na het traject.</p>
       </div>
       <div class="resultaat-item">
-        <div class="resultaat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg></div>
+        <div class="resultaat-icoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg></div>
         <h4>Alles op één plek</h4>
         <p>Digitaal archief in Safety Triggers, toegankelijk voor iedereen.</p>
       </div>
@@ -642,66 +593,66 @@
 
 <!-- SAFETY TRIGGERS -->
 <section class="st-blok">
-  <div class="st-card">
+  <div class="st-kaart">
     <div>
-      <p style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:.75rem;font-weight:600;">Inclusief in het traject</p>
+      <p class="sectie-eyebrow" style="color:var(--lichtblauw);">Inclusief in het traject</p>
       <h2>De structuur <em>leeft</em> in Safety Triggers</h2>
       <p>Alle meldingen, toolboxen, overleggen en documenten komen op één digitale plek. Ik richt het dashboard volledig in als onderdeel van het traject. De eerste drie maanden zijn inbegrepen.</p>
       <ul class="st-features">
-        <li><div class="st-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Meldingen, acties en opvolging</li>
-        <li><div class="st-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Toolboxen met aftekenlijsten</li>
-        <li><div class="st-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Planning en agenda voor het team</li>
-        <li><div class="st-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Veiligheidsarchief op één plek</li>
-        <li><div class="st-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Daarna €100/maand — zelfredzaam</li>
+        <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Meldingen, acties en opvolging</li>
+        <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Toolboxen met aftekenlijsten</li>
+        <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Planning en agenda voor het team</li>
+        <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Veiligheidsarchief op één plek</li>
+        <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Daarna €100/maand — jullie draaien het zelf</li>
       </ul>
     </div>
     <div class="st-visual">
-      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-name">Meldingen</span><span class="st-module-tag">ingericht</span></div>
-      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-name">Toolboxen</span><span class="st-module-tag">ingericht</span></div>
-      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-name">Planning en overleg</span><span class="st-module-tag">ingericht</span></div>
-      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-name">Actielijst</span><span class="st-module-tag">ingericht</span></div>
-      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-name">Safety archief</span><span class="st-module-tag">ingericht</span></div>
-      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-name">Triggers</span><span class="st-module-tag">ingericht</span></div>
-      <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.1);">
-        <div style="font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:4px;">Na het traject</div>
-        <div style="font-size:15px;font-weight:600;color:white;">€100 <span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.5);">per maand — jullie draaien het zelf</span></div>
+      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-naam">Meldingen</span><span class="st-module-tag">ingericht</span></div>
+      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-naam">Toolboxen</span><span class="st-module-tag">ingericht</span></div>
+      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-naam">Planning en overleg</span><span class="st-module-tag">ingericht</span></div>
+      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-naam">Actielijst</span><span class="st-module-tag">ingericht</span></div>
+      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-naam">Safety archief</span><span class="st-module-tag">ingericht</span></div>
+      <div class="st-module"><div class="st-module-dot"></div><span class="st-module-naam">Triggers</span><span class="st-module-tag">ingericht</span></div>
+      <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.15);">
+        <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:4px;font-family:'Raleway',sans-serif;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">Na het traject</div>
+        <div style="font-size:16px;font-weight:700;color:white;font-family:'Raleway',sans-serif;">€100 <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.75);font-family:'Trebuchet MS',sans-serif;">per maand — jullie draaien het zelf</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- TARIEVEN -->
-<section class="tarieven" id="tarieven">
-  <div class="tarieven-inner">
-    <p class="section-eyebrow">Investering</p>
-    <h2 class="section-title">Vaste prijs, geen verrassingen</h2>
+<section class="sectie-lichtgrijs" id="tarieven">
+  <div class="sectie-inner">
+    <p class="sectie-eyebrow">Investering</p>
+    <h2 class="sectie-titel">Vaste prijs, geen verrassingen</h2>
     <div class="tarieven-grid">
-      <div class="tarief-card">
+      <div class="tarief-kaart">
         <div class="tarief-name">Basistraject</div>
-        <div class="tarief-price">€6.500 <span>excl. btw</span></div>
+        <div class="tarief-prijs">€6.500 <span>excl. btw</span></div>
         <div class="tarief-sub">Vaste prijs — 90 dagen</div>
         <ul class="tarief-items">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Volledige veiligheidsstructuur</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Safety Triggers dashboard ingericht</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Begeleiding preventiemedewerker</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Overdracht en borging</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Eerste 3 maanden ST gratis</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Eerste 3 maanden Safety Triggers gratis</li>
         </ul>
       </div>
-      <div class="tarief-card featured">
+      <div class="tarief-kaart uitgelicht">
         <div class="tarief-badge">Meest compleet</div>
         <div class="tarief-name">Compleet traject</div>
-        <div class="tarief-price">€7.500 <span>excl. btw</span></div>
-        <div class="tarief-sub">Inclusief PM praktijktraining</div>
+        <div class="tarief-prijs">€7.500 <span>excl. btw</span></div>
+        <div class="tarief-sub">Inclusief praktijktraining preventiemedewerker</div>
         <ul class="tarief-items">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Alles uit het basistraject</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>PM praktijktraining (8 uur op locatie)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Praktijktraining preventiemedewerker (8 uur op locatie)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Klaar voor RI&amp;E, NEN of VCA</li>
         </ul>
       </div>
-      <div class="tarief-card">
+      <div class="tarief-kaart">
         <div class="tarief-name">Nazorg</div>
-        <div class="tarief-price">€275 <span>/maand</span></div>
+        <div class="tarief-prijs">€275 <span>/maand</span></div>
         <div class="tarief-sub">Optioneel na afloop</div>
         <ul class="tarief-items">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Beschikbaarheid op afroep</li>
@@ -714,36 +665,36 @@
 </section>
 
 <!-- MODULES -->
-<section class="modules">
-  <p class="section-eyebrow">Aanvullende modules</p>
-  <h2 class="section-title">Meer nodig? Modulair uitbreiden</h2>
+<section class="sectie">
+  <p class="sectie-eyebrow">Aanvullende modules</p>
+  <h2 class="sectie-titel">Meer nodig? Modulair uitbreiden</h2>
   <div class="modules-grid">
-    <div class="module-card">
+    <div class="module-kaart">
       <h4>Werken met derden</h4>
       <p>Bezoekersprotocol, contractors, onderaannemers en informatievoorziening.</p>
       <div class="module-price">Vanaf €750</div>
     </div>
-    <div class="module-card">
-      <h4>PM praktijktraining</h4>
+    <div class="module-kaart">
+      <h4>Praktijktraining preventiemedewerker</h4>
       <p>Geen theoriecursus, maar begeleiding binnen de eigen organisatie op locatie.</p>
       <div class="module-price">€960 (8 uur)</div>
     </div>
-    <div class="module-card">
+    <div class="module-kaart">
       <h4>Toolboxen en communicatie</h4>
       <p>Toolboxbibliotheek, narrowcasting, veiligheidscommunicatie op maat.</p>
       <div class="module-price">Vanaf €750</div>
     </div>
-    <div class="module-card">
+    <div class="module-kaart">
       <h4>Registraties en beheer</h4>
       <p>PBM, arbeidsmiddelen, gevaarlijke stoffen en keuringoverzicht.</p>
       <div class="module-price">Vanaf €750</div>
     </div>
-    <div class="module-card">
+    <div class="module-kaart">
       <h4>Voorbereiding VCA of ISO</h4>
       <p>Structuur en documentatie als basis voor certificering.</p>
       <div class="module-price">Op aanvraag</div>
     </div>
-    <div class="module-card">
+    <div class="module-kaart">
       <h4>Jaarlijkse veiligheidscheck</h4>
       <p>Halve dag op locatie, korte review van de structuur en een adviesrapport.</p>
       <div class="module-price">€650</div>
@@ -754,7 +705,6 @@
 <!-- NIET INBEGREPEN -->
 <div class="niet">
   <div class="niet-inner">
-    <div class="niet-icon">ℹ</div>
     <p><strong>Niet inbegrepen:</strong> RI&amp;E uitvoering, certificeringstrajecten, juridische ondersteuning, machinekeuringen en Arbeidsinspectietrajecten. Hiervoor verwijs ik door naar geschikte partners.</p>
   </div>
 </div>
@@ -767,9 +717,12 @@
   <div class="cta-meta">Of bel direct · nrdoet.nl · safetytriggers.nl</div>
 </section>
 
+<footer>
+  <p>&copy; 2025 NRdoet · <a href="https://www.nrdoet.nl">nrdoet.nl</a> · <a href="https://www.safetytriggers.nl">safetytriggers.nl</a></p>
+</footer>
+
 <script>
-  // Counter animatie
-  const el = document.getElementById('counter');
+  const el = document.getElementById('teller');
   let start = null;
   const duration = 1800;
   const target = 90;
