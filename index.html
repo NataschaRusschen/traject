@@ -269,6 +269,35 @@
     color: var(--lichtblauw); margin-bottom: 4px;
   }
 
+
+
+  /* WAAROM IK */
+  .waarom-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; align-items: stretch; }
+  .waarom-tekst p { font-size: 16px; color: #444; margin-bottom: 1rem; }
+  .waarom-kaart {
+    background: var(--blauw); color: white; border-radius: var(--radius);
+    padding: 1.75rem; display: flex; flex-direction: column; justify-content: center;
+  }
+  .waarom-kaart strong { font-family: 'Raleway', sans-serif; font-size: 20px; margin-bottom: 0.75rem; }
+  .waarom-kaart p { font-size: 15px; line-height: 1.7; color: white; }
+
+  /* VEELGESTELDE VRAGEN */
+  .faq { display: grid; gap: 12px; }
+  .faq details {
+    background: white; border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+  }
+  .faq summary {
+    cursor: pointer; list-style: none; font-family: 'Raleway', sans-serif;
+    font-weight: 700; color: var(--blauw); padding-right: 2rem; position: relative;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: '+'; position: absolute; right: 0; top: -2px; color: var(--oranje); font-size: 22px;
+  }
+  .faq details[open] summary::after { content: '–'; }
+  .faq p { font-size: 14px; color: #444; line-height: 1.7; margin-top: 0.75rem; }
+
   /* TARIEVEN */
   .tarieven-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
   .tarief-kaart {
@@ -355,7 +384,7 @@
     .fasen-grid { grid-template-columns: 1fr; }
     .st-kaart { grid-template-columns: 1fr; }
     .tarieven-grid { grid-template-columns: 1fr; }
-    .aanpak-grid { grid-template-columns: 1fr; }
+    .aanpak-grid, .waarom-grid { grid-template-columns: 1fr; }
   }
   @media (prefers-reduced-motion: reduce) {
     .teller-ring::before { animation: none; }
@@ -555,6 +584,25 @@
   </div>
 </section>
 
+
+
+<!-- WAAROM IK -->
+<section class="sectie">
+  <p class="sectie-eyebrow">Rechtstreeks met mij</p>
+  <h2 class="sectie-titel">Waarom ik dit traject kan neerzetten</h2>
+  <div class="waarom-grid">
+    <div class="waarom-tekst">
+      <p>Ik werk als veiligheidskundige midden in organisaties. Niet alleen adviserend, maar juist ook uitvoerend. Ik haal informatie op, maak afspraken duidelijk, richt processen in en zorg dat mensen ermee kunnen werken.</p>
+      <p>Deze aanpak is ontstaan tijdens interimopdrachten waar veiligheid verspreid was geregeld. Daar heb ik bestaande informatie gebundeld, verantwoordelijkheden verduidelijkt en een praktische structuur opgebouwd voor MT, medewerkers, bezoekers en onderaannemers.</p>
+      <p>Je werkt gedurende het hele traject rechtstreeks met mij. Geen wisselende adviseurs en geen overdracht aan een junior.</p>
+    </div>
+    <div class="waarom-kaart">
+      <strong>Mijn doel is niet om onmisbaar te worden.</strong>
+      <p>Mijn doel is dat jullie na drie maanden zelf verder kunnen met een structuur die duidelijk, bruikbaar en overdraagbaar is.</p>
+    </div>
+  </div>
+</section>
+
 <!-- TARIEVEN -->
 <section class="sectie-lichtgrijs" id="tarieven">
   <div class="sectie-inner">
@@ -595,6 +643,38 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Jaarlijkse veiligheidscheck €650</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- VEELGESTELDE VRAGEN -->
+<section class="sectie-lichtgrijs">
+  <div class="sectie-inner">
+    <p class="sectie-eyebrow">Veelgestelde vragen</p>
+    <h2 class="sectie-titel">Nog even praktisch</h2>
+    <div class="faq">
+      <details>
+        <summary>Waarom duurt het traject twaalf weken?</summary>
+        <p>Ik werk niet twaalf weken fulltime bij jullie. De structuur wordt stap voor stap opgebouwd terwijl de organisatie gewoon doordraait. Ik ben op verschillende momenten op locatie en werk tussendoor documenten, formats, processen en de inrichting uit. Zo kan wat ik maak meteen worden bekeken, gebruikt en aangepast.</p>
+      </details>
+      <details>
+        <summary>Hoeveel tijd steek jij in het traject?</summary>
+        <p>Dat hangt af van wat er al staat en wat ontbreekt. De vaste prijs is gebaseerd op het afgesproken resultaat, niet op een urenklok. Voor de start leg ik duidelijk vast wat binnen het traject valt. Werk dat daarbuiten valt, gebeurt alleen na overleg.</p>
+      </details>
+      <details>
+        <summary>Werk ik met jou of met een team?</summary>
+        <p>Je werkt rechtstreeks met mij. Ik haal de informatie op, bouw de structuur, maak de benodigde onderdelen en verzorg de overdracht. Waar specialistische kennis nodig is, bijvoorbeeld voor een RI&amp;E-toetsing of machinekeuring, verwijs ik door.</p>
+      </details>
+      <details>
+        <summary>Is dit traject geschikt voor iedere kleine organisatie?</summary>
+        <p>Nee. Bij een heel kleine organisatie met korte lijnen kan een volledig traject te groot zijn. Het past vooral bij organisaties waar informatie verspreid staat, taken onduidelijk zijn, meerdere mensen of locaties betrokken zijn of waar te veel afhankelijk is van één persoon.</p>
+      </details>
+      <details>
+        <summary>Moet Safety Triggers na afloop worden gebruikt?</summary>
+        <p>Nee. De eerste drie maanden zijn inbegrepen, zodat de structuur direct praktisch kan worden ingericht. Na afloop kiezen jullie zelf of je ermee doorgaat. De afspraken, rollen en werkwijzen blijven van de organisatie.</p>
+      </details>
     </div>
   </div>
 </section>
