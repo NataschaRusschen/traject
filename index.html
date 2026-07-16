@@ -10,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --blauw: #004aad;
     --oranje: #ff914b;
@@ -24,9 +23,7 @@
     --tekst: #2a2a2a;
     --radius: 12px;
   }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 16px;
@@ -35,13 +32,10 @@
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
-
   h1, h2, h3, h4, .eyebrow, .sectie-eyebrow, .fase-weeks, .tarief-name,
   .module-price, nav, .btn-primary, .btn-white, .nav-cta {
     font-family: 'Raleway', sans-serif;
   }
-
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(255,255,255,0.97);
@@ -51,10 +45,7 @@
     height: 90px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .nav-logo {
-    font-family: 'Raleway', sans-serif; font-weight: 700;
-    font-size: 20px; color: var(--blauw); text-decoration: none;
-  }
+  .nav-logo { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 20px; color: var(--blauw); text-decoration: none; }
   .nav-logo span { color: var(--oranje); }
   .nav-cta {
     background: var(--oranje); color: white;
@@ -64,8 +55,6 @@
     transition: opacity 0.2s;
   }
   .nav-cta:hover { opacity: 0.85; }
-
-  /* HERO */
   .hero {
     padding: 130px 2rem 80px;
     max-width: 1100px; margin: 0 auto;
@@ -76,10 +65,7 @@
     font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--oranje); font-weight: 700; margin-bottom: 1rem;
   }
-  .hero h1 {
-    font-size: clamp(30px, 4vw, 42px); font-weight: 700;
-    line-height: 1.15; color: var(--blauw); margin-bottom: 1.25rem;
-  }
+  .hero h1 { font-size: clamp(30px, 4vw, 42px); font-weight: 700; line-height: 1.15; color: var(--blauw); margin-bottom: 1.25rem; }
   .hero h1 em { font-style: normal; color: var(--oranje); }
   .hero-sub { font-size: 17px; color: #444; line-height: 1.7; margin-bottom: 2rem; }
   .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
@@ -92,8 +78,6 @@
   .btn-primary:hover { opacity: 0.85; }
   .btn-ghost { color: var(--blauw); font-size: 15px; text-decoration: none; font-weight: 700; }
   .btn-ghost:hover { color: var(--oranje); }
-
-  /* HERO TELLER */
   .hero-teller { text-align: center; }
   .teller-ring {
     width: 260px; height: 260px; border-radius: 50%;
@@ -107,14 +91,8 @@
     animation: spin 30s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .teller-num {
-    font-family: 'Raleway', sans-serif; font-weight: 700;
-    font-size: 88px; line-height: 1; color: var(--blauw);
-  }
-  .teller-unit {
-    font-family: 'Raleway', sans-serif; font-weight: 700;
-    font-size: 13px; color: var(--blauw); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px;
-  }
+  .teller-num { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 88px; line-height: 1; color: var(--blauw); }
+  .teller-unit { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 13px; color: var(--blauw); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
   .teller-pills { display: flex; flex-direction: column; gap: 8px; margin-top: 1.5rem; }
   .teller-pill {
     display: flex; align-items: center; gap: 8px; font-size: 13px; color: #444;
@@ -122,261 +100,112 @@
     width: fit-content; margin: 0 auto;
   }
   .pill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--oranje); flex-shrink: 0; }
-
-  /* VOOR/NA */
-  .voorna {
-    background: var(--lichtblauw-bg);
-    border-top: 1px solid var(--lichtblauw-mid);
-    border-bottom: 1px solid var(--lichtblauw-mid);
-    padding: 80px 2rem;
-  }
+  .voorna { background: var(--lichtblauw-bg); border-top: 1px solid var(--lichtblauw-mid); border-bottom: 1px solid var(--lichtblauw-mid); padding: 80px 2rem; }
   .voorna-inner { max-width: 1100px; margin: 0 auto; }
-  .voorna-titel {
-    font-size: clamp(22px, 3.5vw, 30px); font-weight: 700;
-    line-height: 1.2; color: var(--blauw);
-    text-align: center; margin-bottom: 2.5rem;
-  }
+  .voorna-titel { font-size: clamp(22px, 3.5vw, 30px); font-weight: 700; line-height: 1.2; color: var(--blauw); text-align: center; margin-bottom: 2.5rem; }
   .voorna-grid { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; align-items: start; }
-  .voorna-col h3 {
-    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
-    margin-bottom: 1.25rem; font-weight: 700;
-  }
+  .voorna-col h3 { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; font-weight: 700; }
   .voor h3 { color: #999; }
   .na h3 { color: var(--oranje); }
   .voor-item, .na-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
-  .voor-dot {
-    width: 22px; height: 22px; border-radius: 50%;
-    background: #e0e0e0; border: 1px solid #ccc;
-    flex-shrink: 0; margin-top: 1px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 11px; color: #999;
-  }
-  .na-dot {
-    width: 22px; height: 22px; border-radius: 50%;
-    background: var(--oranje); flex-shrink: 0; margin-top: 1px;
-    display: flex; align-items: center; justify-content: center;
-  }
+  .voor-dot { width: 22px; height: 22px; border-radius: 50%; background: #e0e0e0; border: 1px solid #ccc; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #999; }
+  .na-dot { width: 22px; height: 22px; border-radius: 50%; background: var(--oranje); flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; }
   .na-dot svg { width: 11px; height: 11px; }
   .voor-item span { font-size: 15px; color: #888; line-height: 1.5; }
   .na-item span { font-size: 15px; color: var(--tekst); line-height: 1.5; font-weight: 700; }
   .voorna-pijl { display: flex; align-items: center; justify-content: center; padding-top: 28px; }
-  .pijl-cirkel {
-    width: 44px; height: 44px; border-radius: 50%; background: var(--blauw);
-    display: flex; align-items: center; justify-content: center;
-  }
+  .pijl-cirkel { width: 44px; height: 44px; border-radius: 50%; background: var(--blauw); display: flex; align-items: center; justify-content: center; }
   .pijl-cirkel svg { width: 18px; height: 18px; color: white; }
-
-  /* SECTIES */
   .sectie { padding: 80px 2rem; max-width: 1100px; margin: 0 auto; }
   .sectie-lichtgrijs { background: var(--lichtgrijs); padding: 80px 2rem; }
   .sectie-lichtgrijs .sectie-inner { max-width: 1100px; margin: 0 auto; }
-  .sectie-eyebrow {
-    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--oranje); font-weight: 700; margin-bottom: 0.75rem;
-  }
-  .sectie-titel {
-    font-size: clamp(22px, 3.5vw, 30px); font-weight: 700;
-    line-height: 1.2; margin-bottom: 2.5rem; color: var(--blauw);
-  }
-
-
+  .sectie-eyebrow { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--oranje); font-weight: 700; margin-bottom: 0.75rem; }
+  .sectie-titel { font-size: clamp(22px, 3.5vw, 30px); font-weight: 700; line-height: 1.2; margin-bottom: 2.5rem; color: var(--blauw); }
   .aanpak-grid { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 2rem; align-items: start; }
   .aanpak-tekst p { margin-bottom: 1rem; font-size: 16px; color: #444; }
   .bewijs-kaart { background: var(--lichtblauw-bg); border: 1px solid var(--lichtblauw-mid); border-radius: var(--radius); padding: 1.5rem; }
   .bewijs-kaart strong { display: block; color: var(--blauw); font-family: 'Raleway', sans-serif; margin-bottom: 0.5rem; }
   .bewijs-kaart p { font-size: 14px; color: #444; line-height: 1.6; }
   .tarieven-intro { max-width: 780px; margin-top: -1.25rem; margin-bottom: 2rem; color: #444; }
-
-  /* FASEN — alle nummers blauw */
   .fasen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-  .fase-kaart {
-    background: white; border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 1.75rem; transition: box-shadow 0.2s;
-  }
+  .fase-kaart { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; transition: box-shadow 0.2s; }
   .fase-kaart:hover { box-shadow: 0 6px 24px rgba(0,74,173,0.08); }
   .fase-num-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; }
-  .fase-num {
-    width: 46px; height: 46px; border-radius: 50%;
-    background: var(--lichtblauw-bg); color: var(--blauw);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Raleway', sans-serif; font-size: 18px; font-weight: 700; flex-shrink: 0;
-  }
+  .fase-num { width: 46px; height: 46px; border-radius: 50%; background: var(--lichtblauw-bg); color: var(--blauw); display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-size: 18px; font-weight: 700; flex-shrink: 0; }
   .fase-weeks { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #888; font-weight: 700; }
   .fase-titel { font-size: 16px; font-weight: 700; margin-bottom: 1rem; color: var(--blauw); }
   .fase-items { list-style: none; }
-  .fase-items li {
-    font-size: 14px; color: #444; padding: 4px 0;
-    display: flex; gap: 8px; align-items: flex-start; line-height: 1.5;
-  }
+  .fase-items li { font-size: 14px; color: #444; padding: 4px 0; display: flex; gap: 8px; align-items: flex-start; line-height: 1.5; }
   .fase-items li::before { content: '—'; color: var(--lichtblauw); flex-shrink: 0; margin-top: 1px; }
-
-  /* RESULTAAT */
   .resultaat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-  .resultaat-item {
-    background: white; border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 1.25rem;
-    display: flex; flex-direction: column; gap: 8px;
-  }
-  .resultaat-icoon {
-    width: 36px; height: 36px; border-radius: 8px; background: var(--lichtblauw-bg);
-    display: flex; align-items: center; justify-content: center;
-  }
+  .resultaat-item { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; display: flex; flex-direction: column; gap: 8px; }
+  .resultaat-icoon { width: 36px; height: 36px; border-radius: 8px; background: var(--lichtblauw-bg); display: flex; align-items: center; justify-content: center; }
   .resultaat-icoon svg { width: 18px; height: 18px; color: var(--blauw); }
   .resultaat-item h4 { font-size: 14px; font-weight: 700; color: var(--blauw); }
   .resultaat-item p { font-size: 13px; color: #555; line-height: 1.5; }
-
-  /* SAFETY TRIGGERS */
   .st-blok { padding: 80px 2rem; max-width: 1100px; margin: 0 auto; }
-  .st-kaart {
-    background: var(--blauw); border-radius: 20px; padding: 3rem;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
-  }
-  .st-eyebrow {
-    font-family: 'Raleway', sans-serif; font-size: 12px; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--lichtblauw); font-weight: 700; margin-bottom: 0.75rem;
-  }
-  .st-kaart h2 {
-    font-size: clamp(20px, 2.5vw, 28px); font-weight: 700;
-    color: white; line-height: 1.2; margin-bottom: 1rem;
-  }
+  .st-kaart { background: var(--blauw); border-radius: 20px; padding: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+  .st-eyebrow { font-family: 'Raleway', sans-serif; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lichtblauw); font-weight: 700; margin-bottom: 0.75rem; }
+  .st-kaart h2 { font-size: clamp(20px, 2.5vw, 28px); font-weight: 700; color: white; line-height: 1.2; margin-bottom: 1rem; }
   .st-kaart h2 em { font-style: normal; color: var(--oranje); }
   .st-kaart p { font-size: 15px; color: #ffffff; line-height: 1.7; margin-bottom: 1.5rem; }
   .st-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .st-features li { display: flex; gap: 10px; align-items: center; font-size: 15px; color: #ffffff; }
-  .st-vinkje {
-    width: 22px; height: 22px; border-radius: 50%; background: var(--oranje); flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-  }
+  .st-vinkje { width: 22px; height: 22px; border-radius: 50%; background: var(--oranje); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
   .st-vinkje svg { width: 11px; height: 11px; }
-  .st-visual {
-    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 12px; padding: 1.5rem;
-  }
-  .st-module {
-    display: flex; align-items: center; gap: 10px;
-    padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.12);
-  }
+  .st-visual { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 12px; padding: 1.5rem; }
+  .st-module { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
   .st-module:last-child { border-bottom: none; }
   .st-module-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--oranje); flex-shrink: 0; }
   .st-module-naam { font-size: 14px; color: #ffffff; }
-  .st-module-tag {
-    margin-left: auto; font-size: 11px; font-weight: 700; font-family: 'Raleway', sans-serif;
-    background: rgba(255,255,255,0.18); color: #ffffff; padding: 2px 10px; border-radius: 99px;
-  }
+  .st-module-tag { margin-left: auto; font-size: 11px; font-weight: 700; font-family: 'Raleway', sans-serif; background: rgba(255,255,255,0.18); color: #ffffff; padding: 2px 10px; border-radius: 99px; }
   .st-na { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.18); }
-  .st-na-label {
-    font-family: 'Raleway', sans-serif; font-weight: 700;
-    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--lichtblauw); margin-bottom: 4px;
-  }
-
-
-
-  /* WAAROM IK */
+  .st-na-label { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lichtblauw); margin-bottom: 4px; }
   .waarom-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; align-items: stretch; }
   .waarom-tekst p { font-size: 16px; color: #444; margin-bottom: 1rem; }
-  .waarom-kaart {
-    background: var(--blauw); color: white; border-radius: var(--radius);
-    padding: 1.75rem; display: flex; flex-direction: column; justify-content: center;
-  }
-  .waarom-kaart strong { font-family: 'Raleway', sans-serif; font-size: 20px; margin-bottom: 0.75rem; }
+  .waarom-kaart { background: var(--blauw); color: white; border-radius: var(--radius); padding: 1.75rem; display: flex; flex-direction: column; justify-content: center; }
+  .waarom-kaart strong { font-family: 'Raleway', sans-serif; font-size: 20px; margin-bottom: 0.75rem; display: block; }
   .waarom-kaart p { font-size: 15px; line-height: 1.7; color: white; }
-
-  /* VEELGESTELDE VRAGEN */
+  .wanneer-grid { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 2rem; align-items: start; }
+  .wanneer-tekst p { margin-bottom: 1rem; font-size: 16px; color: #444; }
   .faq { display: grid; gap: 12px; }
-  .faq details {
-    background: white; border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 1rem 1.25rem;
-  }
-  .faq summary {
-    cursor: pointer; list-style: none; font-family: 'Raleway', sans-serif;
-    font-weight: 700; color: var(--blauw); padding-right: 2rem; position: relative;
-  }
+  .faq details { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; }
+  .faq summary { cursor: pointer; list-style: none; font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--blauw); padding-right: 2rem; position: relative; }
   .faq summary::-webkit-details-marker { display: none; }
-  .faq summary::after {
-    content: '+'; position: absolute; right: 0; top: -2px; color: var(--oranje); font-size: 22px;
-  }
+  .faq summary::after { content: '+'; position: absolute; right: 0; top: -2px; color: var(--oranje); font-size: 22px; }
   .faq details[open] summary::after { content: '–'; }
   .faq p { font-size: 14px; color: #444; line-height: 1.7; margin-top: 0.75rem; }
-
-  /* TARIEVEN */
   .tarieven-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-  .tarief-kaart {
-    background: white; border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 1.75rem; display: flex; flex-direction: column;
-  }
+  .tarief-kaart { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; display: flex; flex-direction: column; }
   .tarief-kaart.uitgelicht { border: 2px solid var(--oranje); position: relative; }
-  .tarief-badge {
-    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-    background: var(--oranje); color: white;
-    font-size: 11px; font-weight: 700; letter-spacing: 0.06em; font-family: 'Raleway', sans-serif;
-    padding: 4px 16px; border-radius: 99px; white-space: nowrap;
-  }
+  .tarief-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--oranje); color: white; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; font-family: 'Raleway', sans-serif; padding: 4px 16px; border-radius: 99px; white-space: nowrap; }
   .tarief-name { font-size: 14px; color: #666; margin-bottom: 0.5rem; font-weight: 700; }
   .tarief-prijs { font-size: 34px; font-weight: 700; color: var(--blauw); line-height: 1; margin-bottom: 4px; }
   .tarief-prijs span { font-size: 14px; color: #888; font-weight: 400; font-family: 'Trebuchet MS', sans-serif; }
   .tarief-sub { font-size: 13px; color: #777; margin-bottom: 1.25rem; }
   .tarief-items { list-style: none; flex: 1; margin-bottom: 1.25rem; }
-  .tarief-items li {
-    display: flex; gap: 8px; align-items: flex-start;
-    font-size: 14px; color: #333; padding: 5px 0; line-height: 1.5;
-  }
+  .tarief-items li { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; color: #333; padding: 5px 0; line-height: 1.5; }
   .tarief-items li svg { width: 15px; height: 15px; color: var(--blauw); flex-shrink: 0; margin-top: 2px; }
-
-  /* MODULES */
   .modules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
   .module-kaart { border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; background: white; }
   .module-kaart h4 { font-size: 15px; font-weight: 700; color: var(--blauw); margin-bottom: 6px; }
-  .module-kaart p { font-size: 13px; color: #555; line-height: 1.5; margin-bottom: 0.75rem; }
-  .module-price { font-size: 14px; font-weight: 700; color: var(--oranje); }
-
-  /* NIET INBEGREPEN */
+  .module-kaart p { font-size: 13px; color: #555; line-height: 1.5; }
   .niet { max-width: 1100px; margin: 0 auto; padding: 0 2rem 80px; }
-  .niet-inner {
-    background: var(--lichtgrijs); border-radius: var(--radius);
-    padding: 1.25rem 1.5rem; border-left: 4px solid var(--lichtblauw);
-  }
+  .niet-inner { background: var(--lichtgrijs); border-radius: var(--radius); padding: 1.25rem 1.5rem; border-left: 4px solid var(--lichtblauw); }
   .niet-inner p { font-size: 14px; color: #444; line-height: 1.7; }
   .niet-inner strong { color: var(--blauw); font-weight: 700; }
-
-/* CTA — lichtblauw met zwarte letters */
-  .cta-sectie {
-    background: var(--lichtblauw-bg);
-    border-top: 1px solid var(--lichtblauw-mid);
-    padding: 80px 2rem; text-align: center;
-  }
-  .cta-sectie h2 {
-    font-size: clamp(24px, 4vw, 36px); font-weight: 700;
-    color: var(--blauw); margin-bottom: 1rem; line-height: 1.2;
-  }
+  .cta-sectie { background: var(--lichtblauw-bg); border-top: 1px solid var(--lichtblauw-mid); padding: 80px 2rem; text-align: center; }
+  .cta-sectie h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 700; color: var(--blauw); margin-bottom: 1rem; line-height: 1.2; }
   .cta-sectie p { font-size: 16px; color: #222; margin-bottom: 2rem; }
   .cta-knoppen { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
-  .btn-white {
-    background: var(--blauw); color: white;
-    border: none; border-radius: 8px;
-    padding: 14px 28px; font-size: 15px; font-weight: 700;
-    cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s;
-    font-family: 'Raleway', sans-serif;
-  }
+  .btn-white { background: var(--blauw); color: white; border: none; border-radius: 8px; padding: 14px 28px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s; font-family: 'Raleway', sans-serif; }
   .btn-white:hover { opacity: 0.88; }
-  .btn-wit-lijn {
-    background: transparent; color: var(--blauw);
-    border: 2px solid var(--blauw); border-radius: 8px;
-    padding: 14px 28px; font-size: 15px; font-weight: 700; font-family: 'Raleway', sans-serif;
-    cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s;
-  }
+  .btn-wit-lijn { background: transparent; color: var(--blauw); border: 2px solid var(--blauw); border-radius: 8px; padding: 14px 28px; font-size: 15px; font-weight: 700; font-family: 'Raleway', sans-serif; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
   .btn-wit-lijn:hover { background: rgba(0,74,173,0.08); }
   .cta-tel { font-size: 14px; color: #222; }
   .cta-tel a { color: var(--blauw); font-weight: 700; text-decoration: none; }
-
-  /* FOOTER */
-  footer {
-    background: var(--blauw); color: rgba(255,255,255,0.7);
-    text-align: center; padding: 1.5rem 2rem; font-size: 13px;
-  }
+  footer { background: var(--blauw); color: rgba(255,255,255,0.7); text-align: center; padding: 1.5rem 2rem; font-size: 13px; }
   footer a { color: var(--lichtblauw); text-decoration: none; }
-
-  /* RESPONSIVE */
   @media (max-width: 768px) {
     .hero { grid-template-columns: 1fr; gap: 2rem; padding: 100px 1.25rem 60px; }
     .hero-teller { display: none; }
@@ -385,7 +214,7 @@
     .fasen-grid { grid-template-columns: 1fr; }
     .st-kaart { grid-template-columns: 1fr; }
     .tarieven-grid { grid-template-columns: 1fr; }
-    .aanpak-grid, .waarom-grid { grid-template-columns: 1fr; }
+    .aanpak-grid, .waarom-grid, .wanneer-grid { grid-template-columns: 1fr; }
   }
   @media (prefers-reduced-motion: reduce) {
     .teller-ring::before { animation: none; }
@@ -401,7 +230,6 @@
   </div>
 </nav>
 
- <!-- HERO -->
 <section class="hero">
   <div>
     <span class="eyebrow">Voor MKB en scholen in Groningen en omgeving</span>
@@ -409,7 +237,7 @@
     <p class="hero-sub">Geen dikke rapporten en geen blijvende afhankelijkheid van een externe veiligheidskundige. In drie maanden staat er een praktische veiligheidsstructuur die past bij jullie organisatie en blijft werken als ik vertrek.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Plan een kennismaking</a>
-      <a href="#traject" class="btn-ghost">Hoe het werkt ↓</a>
+      <a href="#traject" class="btn-ghost">Hoe het werkt &#8595;</a>
     </div>
   </div>
   <div class="hero-teller">
@@ -425,19 +253,18 @@
   </div>
 </section>
 
-<!-- VOOR/NA -->
 <section class="voorna">
   <div class="voorna-inner">
     <h2 class="voorna-titel">Herkenbaar?</h2>
     <div class="voorna-grid">
       <div class="voorna-col voor">
         <h3>Nu</h3>
-        <div class="voor-item"><div class="voor-dot">✕</div><span>De RI&amp;E ligt in een la</span></div>
-        <div class="voor-item"><div class="voor-dot">✕</div><span>Keuringen staan op drie verschillende plekken</span></div>
-        <div class="voor-item"><div class="voor-dot">✕</div><span>De preventiemedewerker weet niet precies wat hij moet doen</span></div>
-        <div class="voor-item"><div class="voor-dot">✕</div><span>Meldingen worden niet goed opgevolgd</span></div>
-        <div class="voor-item"><div class="voor-dot">✕</div><span>Alles hangt af van één persoon</span></div>
-        <div class="voor-item"><div class="voor-dot">✕</div><span>Bij een inspectie moet alles nog bij elkaar worden gezocht</span></div>
+        <div class="voor-item"><div class="voor-dot">&#10005;</div><span>De RI&amp;E ligt in een la</span></div>
+        <div class="voor-item"><div class="voor-dot">&#10005;</div><span>Keuringen staan op drie verschillende plekken</span></div>
+        <div class="voor-item"><div class="voor-dot">&#10005;</div><span>De preventiemedewerker weet niet precies wat hij moet doen</span></div>
+        <div class="voor-item"><div class="voor-dot">&#10005;</div><span>Meldingen worden niet goed opgevolgd</span></div>
+        <div class="voor-item"><div class="voor-dot">&#10005;</div><span>Alles hangt af van één persoon</span></div>
+        <div class="voor-item"><div class="voor-dot">&#10005;</div><span>Bij een inspectie moet alles nog bij elkaar worden gezocht</span></div>
       </div>
       <div class="voorna-pijl">
         <div class="pijl-cirkel">
@@ -457,7 +284,6 @@
   </div>
 </section>
 
-<!-- AANPAK -->
 <section class="sectie">
   <p class="sectie-eyebrow">Praktisch en op maat</p>
   <h2 class="sectie-titel">Ik begin niet met een standaard handboek</h2>
@@ -468,18 +294,17 @@
     </div>
     <div class="bewijs-kaart">
       <strong>Gebouwd in de praktijk</strong>
-      <p>Deze aanpak komt uit mijn interimwerk bij organisaties waar veiligheid versnipperd was geregeld. De Nederlandse Arbeidsinspectie reageerde positief op de overzichtelijke structuur en inhoud.</p>
+      <p>Deze aanpak is ontstaan tijdens interimopdrachten waar veiligheid verspreid was geregeld. De Nederlandse Arbeidsinspectie reageerde met complimenten op de structuur en inhoud van het opgeleverde werk.</p>
     </div>
   </div>
 </section>
 
-<!-- TRAJECT -->
 <section class="sectie" id="traject">
   <p class="sectie-eyebrow">Het traject</p>
   <h2 class="sectie-titel">Drie fasen, twaalf weken</h2>
   <div class="fasen-grid">
     <div class="fase-kaart">
-      <div class="fase-num-wrap"><div class="fase-num">1</div><span class="fase-weeks">Weken 1–3</span></div>
+      <div class="fase-num-wrap"><div class="fase-num">1</div><span class="fase-weeks">Weken 1&#8211;3</span></div>
       <div class="fase-titel">Ophalen en ordenen</div>
       <ul class="fase-items">
         <li>Intakegesprek met MT</li>
@@ -490,7 +315,7 @@
       </ul>
     </div>
     <div class="fase-kaart">
-      <div class="fase-num-wrap"><div class="fase-num">2</div><span class="fase-weeks">Weken 4–10</span></div>
+      <div class="fase-num-wrap"><div class="fase-num">2</div><span class="fase-weeks">Weken 4&#8211;10</span></div>
       <div class="fase-titel">Bouwen en inrichten</div>
       <ul class="fase-items">
         <li>Rollen, taken en verantwoordelijkheden</li>
@@ -502,7 +327,7 @@
       </ul>
     </div>
     <div class="fase-kaart">
-      <div class="fase-num-wrap"><div class="fase-num">3</div><span class="fase-weeks">Weken 11–12</span></div>
+      <div class="fase-num-wrap"><div class="fase-num">3</div><span class="fase-weeks">Weken 11&#8211;12</span></div>
       <div class="fase-titel">Overdragen en borgen</div>
       <ul class="fase-items">
         <li>Overdrachtsoverleg MT en preventiemedewerker</li>
@@ -514,7 +339,6 @@
   </div>
 </section>
 
-<!-- RESULTAAT -->
 <section class="sectie-lichtgrijs">
   <div class="sectie-inner">
     <p class="sectie-eyebrow">Wat je krijgt</p>
@@ -556,7 +380,6 @@
   </div>
 </section>
 
-<!-- SAFETY TRIGGERS -->
 <section class="st-blok">
   <div class="st-kaart">
     <div>
@@ -569,7 +392,7 @@
         <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Planning en agenda voor het team</li>
         <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Veiligheidsarchief op één plek</li>
         <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Eerste zes maanden inbegrepen</li>
-        <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Daarna bepalen jullie zelf hoe je verder wilt.</li>
+        <li><div class="st-vinkje"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>Daarna bepalen jullie zelf hoe je verder wilt</li>
       </ul>
     </div>
     <div class="st-visual">
@@ -582,15 +405,12 @@
       <div class="st-module"><div class="st-module-dot"></div><span class="st-module-naam">Safety archief</span><span class="st-module-tag">ingericht</span></div>
       <div class="st-na">
         <div class="st-na-label">Na zes maanden</div>
-        <a href="https://safetytriggers.nl/#abonnementen-en-tarieven" style="color:var(--lichtblauw); font-weight:700; font-size:15px;">Licentiekosten + abonnement vanaf €60 per maand</a>
+        <a href="https://safetytriggers.nl/#abonnementen-en-tarieven" style="color:var(--lichtblauw); font-weight:700; font-size:15px;">Licentiekosten + abonnement vanaf &#8364;60 per maand</a>
       </div>
     </div>
   </div>
 </section>
 
-
-
-<!-- WAAROM IK -->
 <section class="sectie">
   <p class="sectie-eyebrow">Rechtstreeks met mij</p>
   <h2 class="sectie-titel">Waarom ik dit traject kan neerzetten</h2>
@@ -602,36 +422,23 @@
     </div>
     <div class="waarom-kaart">
       <strong>Mijn doel is om mezelf misbaar te maken.</strong>
-      <p>Mijn doel is dat jullie na drie maanden een veiligheidsstructuur hebben waarmee jullie zelfstandig verder kunnen.</p>
+      <p>Na drie maanden hebben jullie een veiligheidsstructuur waarmee jullie zelfstandig verder kunnen. Niet afhankelijk van mij, maar van de structuur en de organisatie.</p>
     </div>
   </div>
 </section>
 
-<!-- TARIEVEN -->
 <section class="sectie-lichtgrijs" id="tarieven">
   <div class="sectie-inner">
     <p class="sectie-eyebrow">Investering</p>
     <h2 class="sectie-titel">Vooraf duidelijk wat het kost en wat je krijgt</h2>
-
-    <p class="tarieven-intro">
-      Gedurende twaalf weken haal ik op wat er al is, orden ik de informatie, maak ik wat ontbreekt en richt ik de praktische werkwijze in. Ik ben meerdere dagdelen op locatie en werk tussendoor aan de documenten, formats en inrichting. Aan het einde kan de organisatie zelfstandig verder.
-    </p>
-
-    <p class="tarieven-intro" style="margin-top:-1rem;">
-      <strong>De genoemde prijzen gelden voor organisaties tot 50 medewerkers.</strong>
-      Hebben jullie meer medewerkers of meerdere locaties? Dan maak ik graag een voorstel op maat.
-    </p>
-
-    <p class="tarieven-intro" style="margin-top:-1rem;">
-      Beide trajecten geven een goede basis voor de RI&amp;E, inspecties, NEN en VCA.
-    </p>
-
+    <p class="tarieven-intro">Gedurende twaalf weken haal ik op wat er al is, orden ik de informatie, maak ik wat ontbreekt en richt ik de praktische werkwijze in. Ik ben meerdere dagdelen op locatie en werk tussendoor aan de documenten, formats en inrichting. Aan het einde kan de organisatie zelfstandig verder.</p>
+    <p class="tarieven-intro" style="margin-top:-1rem;"><strong>De genoemde prijzen gelden voor organisaties tot 50 medewerkers.</strong> Hebben jullie meer medewerkers of meerdere locaties? Dan maak ik graag een voorstel op maat.</p>
+    <p class="tarieven-intro" style="margin-top:-1rem;">Beide trajecten geven een goede basis voor de RI&amp;E, inspecties, NEN en VCA.</p>
     <div class="tarieven-grid">
-
       <div class="tarief-kaart">
         <div class="tarief-name">Basistraject</div>
-        <div class="tarief-prijs">€6.500 <span>excl. btw</span></div>
-        <div class="tarief-sub">Vaste prijs — 90 dagen</div>
+        <div class="tarief-prijs">&#8364;6.500 <span>excl. btw</span></div>
+        <div class="tarief-sub">Vaste prijs &#8212; 90 dagen</div>
         <ul class="tarief-items">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Volledige veiligheidsstructuur</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Safety Triggers dashboard ingericht</li>
@@ -640,11 +447,10 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Inclusief 6 maanden Safety Triggers</li>
         </ul>
       </div>
-
       <div class="tarief-kaart uitgelicht">
         <div class="tarief-badge">Inclusief opleiding</div>
         <div class="tarief-name">Compleet traject</div>
-        <div class="tarief-prijs">€7.500 <span>excl. btw</span></div>
+        <div class="tarief-prijs">&#8364;7.500 <span>excl. btw</span></div>
         <div class="tarief-sub">Inclusief training en extra begeleiding preventiemedewerker</div>
         <ul class="tarief-items">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Alles uit het basistraject</li>
@@ -652,10 +458,9 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Extra begeleiding tijdens het traject</li>
         </ul>
       </div>
-
       <div class="tarief-kaart">
         <div class="tarief-name">Ondersteuning na afloop</div>
-        <div class="tarief-prijs">Vanaf €375</div>
+        <div class="tarief-prijs">Vanaf &#8364;375</div>
         <div class="tarief-sub">De bedoeling is dat jullie zelfstandig verder kunnen. Toch behoefte aan ondersteuning? Dat kan natuurlijk ook.</div>
         <ul class="tarief-items">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ondersteuning op afroep</li>
@@ -663,24 +468,61 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Veiligheidskundige vragen en kleine aanpassingen</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Jaarlijkse veiligheidscheck</li>
         </ul>
-        <p style="font-size:13px; color:#666; line-height:1.6; margin-top:0.5rem;">
-          Geen standaard abonnement, maar ondersteuning die past bij jullie organisatie.
-        </p>
+        <p style="font-size:13px; color:#666; line-height:1.6; margin-top:0.5rem;">Geen standaard abonnement, maar ondersteuning die past bij jullie organisatie.</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<section style="max-width: 1100px; margin: 0 auto; padding: 3rem 2rem;">
-  <h2>Wanneer werkt deze aanpak?</h2>
-  <p>Een veiligheidsstructuur werkt alleen als mensen hem gebruiken. Daarom zorg ik voor duidelijke afspraken, heldere verantwoordelijkheden en praktische hulpmiddelen die aansluiten bij de dagelijkse praktijk.</p>
-  <p>Of de structuur daarna ook echt blijft leven, hangt af van de organisatie zelf.</p>
-  <p>Wil je daarbij extra ondersteuning? Dat kan via de <strong>ondersteuning na afloop</strong> — je kiest zelf wat nodig is.</p>
+<section class="sectie-lichtgrijs" style="border-top: 1px solid var(--border);">
+  <div class="sectie-inner">
+    <p class="sectie-eyebrow">Randvoorwaarde</p>
+    <h2 class="sectie-titel">Wanneer werkt deze aanpak?</h2>
+    <div class="wanneer-grid">
+      <div class="wanneer-tekst">
+        <p>Een veiligheidsstructuur werkt alleen als mensen hem gebruiken. Daarom zorg ik voor duidelijke afspraken, heldere verantwoordelijkheden en praktische hulpmiddelen die aansluiten bij de dagelijkse praktijk.</p>
+        <p>Of de structuur daarna ook echt blijft leven, hangt af van de organisatie zelf.</p>
+      </div>
+      <div class="bewijs-kaart">
+        <strong>Wil je daarbij extra ondersteuning?</strong>
+        <p>Dat kan via de ondersteuning na afloop &#8212; je kiest zelf wat nodig is.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- VEELGESTELDE VRAGEN -->
-<section class="sectie-lichtgrijs">
+ 
+<section class="sectie">
+  <p class="sectie-eyebrow">Aanvullende modules</p>
+  <h2 class="sectie-titel">Meer nodig? Modulair uitbreiden</h2>
+  <div class="modules-grid">
+    <div class="module-kaart"><h4>Werken met derden</h4><p>Bezoekersprotocol, contractors, onderaannemers en informatievoorziening.</p></div>
+    <div class="module-kaart"><h4>Praktijktraining preventiemedewerker</h4><p>Geen theoriecursus, maar begeleiding binnen de eigen organisatie op locatie.</p></div>
+    <div class="module-kaart"><h4>Toolboxen en communicatie</h4><p>Toolboxbibliotheek, narrowcasting, veiligheidscommunicatie op maat.</p></div>
+    <div class="module-kaart"><h4>Registraties en beheer</h4><p>PBM, arbeidsmiddelen, gevaarlijke stoffen en keuringoverzicht.</p></div>
+    <div class="module-kaart"><h4>Voorbereiding VCA of ISO</h4><p>Aanvullende ondersteuning bij de voorbereiding. Een volledig certificeringstraject valt buiten het basistraject.</p></div>
+    <div class="module-kaart"><h4>Arbeidsinspectietraject</h4><p>Extra ondersteuning bij een inspectie, herinspectie of ongevalsonderzoek.</p></div>
+    <div class="module-kaart"><h4>Jaarlijkse veiligheidscheck</h4><p>Halve dag op locatie, korte review van de structuur en een adviesrapport.</p></div>
+  </div>
+</section>
+
+<div class="niet">
+  <div class="niet-inner">
+    <p><strong>Niet inbegrepen:</strong> het uitvoeren of toetsen van de RI&amp;E, volledige VCA- of ISO-certificeringstrajecten, juridische ondersteuning en machinekeuringen. Ondersteuning bij een Arbeidsinspectietraject valt buiten de vaste prijs en kan op basis van extra uren. Waar nodig verwijs ik door naar een geschikte specialist.</p>
+  </div>
+</div>
+
+<section class="cta-sectie" id="contact">
+  <h2>Even kijken of dit past?</h2>
+  <p>In 30 minuten bespreken we wat er al staat, waar het nu vastloopt en of dit traject logisch is voor jullie organisatie. Geen verkooppraatje en geen verplichtingen.</p>
+  <div class="cta-knoppen">
+    <a href="https://calendly.com/natascha-nrdoet/online-afspraak-30-minuten" class="btn-white">Plan een online afspraak</a>
+    <a href="https://calendly.com/natascha-nrdoet/15min" class="btn-wit-lijn">Belafspraak inplannen</a>
+  </div>
+  <div class="cta-tel">Of bel direct: <a href="tel:0657023819">06 57 02 38 19</a> &nbsp;&#183;&nbsp; <a href="https://www.nrdoet.nl/contact">nrdoet.nl/contact</a></div>
+</section>
+ 
+<section class="sectie-lichtgrijs" style="border-top: 1px solid var(--border);">
   <div class="sectie-inner">
     <p class="sectie-eyebrow">Veelgestelde vragen</p>
     <h2 class="sectie-titel">Nog even praktisch</h2>
@@ -709,51 +551,17 @@
         <summary>Wat als we na afloop toch hulp nodig hebben?</summary>
         <p>Dat kan. Het doel van dit project is dat jullie zelfstandig verder kunnen, maar je staat er niet alleen voor. Hebben jullie later nog een vraag, willen jullie iets uitbreiden of een keer samen naar de veiligheidsstructuur kijken? Dan kan dat. We spreken vooraf af welke ondersteuning het beste past.</p>
       </details>
-         <details>
-  <summary>Waarom werk je met een vaste prijs en niet op uurbasis?</summary>
-  <p>
-    Omdat jullie vooraf willen weten waar je aan toe bent. We spreken vooraf duidelijk af wat we gaan opleveren en wat wel en niet binnen het traject valt. Het gaat om een werkende veiligheidsstructuur, niet om het aantal uren dat ik eraan besteed. Soms is iets sneller klaar dan verwacht, soms kost iets meer tijd. Dat risico ligt bij mij, niet bij jullie.
-  </p>
-</details>
+      <details>
+        <summary>Waarom werk je met een vaste prijs en niet op uurbasis?</summary>
+        <p>Omdat jullie vooraf willen weten waar je aan toe bent. We spreken vooraf duidelijk af wat we gaan opleveren en wat wel en niet binnen het traject valt. Het gaat om een werkende veiligheidsstructuur, niet om het aantal uren dat ik eraan besteed. Soms is iets sneller klaar dan verwacht, soms kost iets meer tijd. Dat risico ligt bij mij, niet bij jullie.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- MODULES -->
-<section class="sectie">
-  <p class="sectie-eyebrow">Aanvullende modules</p>
-  <h2 class="sectie-titel">Meer nodig? Modulair uitbreiden</h2>
-  <div class="modules-grid">
-    <div class="module-kaart"><h4>Werken met derden</h4><p>Bezoekersprotocol, contractors, onderaannemers en informatievoorziening.</p></div>
-    <div class="module-kaart"><h4>Praktijktraining preventiemedewerker</h4><p>Geen theoriecursus, maar begeleiding binnen de eigen organisatie op locatie.</p></div>
-    <div class="module-kaart"><h4>Toolboxen en communicatie</h4><p>Toolboxbibliotheek, narrowcasting, veiligheidscommunicatie op maat.</p></div>
-    <div class="module-kaart"><h4>Registraties en beheer</h4><p>PBM, arbeidsmiddelen, gevaarlijke stoffen en keuringoverzicht.</p></div>
-    <div class="module-kaart"><h4>Voorbereiding VCA of ISO</h4><p>Aanvullende ondersteuning bij de voorbereiding. Een volledig certificeringstraject valt buiten het basistraject.</p></div>
-    <div class="module-kaart"><h4>Arbeidsinspectietraject</h4><p>Extra ondersteuning bij een inspectie, herinspectie of ongevalsonderzoek.</p></div>
-    <div class="module-kaart"><h4>Jaarlijkse veiligheidscheck</h4><p>Halve dag op locatie, korte review van de structuur en een adviesrapport.</p></div>
-  </div>
-</section>
-
-<!-- NIET INBEGREPEN -->
-<div class="niet">
-  <div class="niet-inner">
-    <p><strong>Niet inbegrepen:</strong> het uitvoeren of toetsen van de RI&amp;E, volledige VCA- of ISO-certificeringstrajecten, juridische ondersteuning en machinekeuringen. Ondersteuning bij een Arbeidsinspectietraject valt buiten de vaste prijs en kan op basis van extra uren. Waar nodig verwijs ik door naar een geschikte specialist.</p>
-  </div>
-</div>
-
-<!-- CTA -->
-<section class="cta-sectie" id="contact">
-  <h2>Even kijken of dit past?</h2>
-  <p>In 30 minuten bespreken we wat er al staat, waar het nu vastloopt en of dit traject logisch is voor jullie organisatie. Geen verkooppraatje en geen verplichtingen.</p>
-  <div class="cta-knoppen">
-    <a href="https://calendly.com/natascha-nrdoet/online-afspraak-30-minuten" class="btn-white">Plan een online afspraak</a>
-    <a href="https://calendly.com/natascha-nrdoet/15min" class="btn-wit-lijn">Belafspraak inplannen</a>
-  </div>
-  <div class="cta-tel">Of bel direct: <a href="tel:0657023819">06 57 02 38 19</a> &nbsp;·&nbsp; <a href="https://www.nrdoet.nl/contact">nrdoet.nl/contact</a></div>
-</section>
 
 <footer>
-  <p>&copy; 2026 NRdoet &nbsp;·&nbsp; <a href="https://www.nrdoet.nl">nrdoet.nl</a> &nbsp;·&nbsp; <a href="https://www.safetytriggers.nl">safetytriggers.nl</a></p>
+  <p>&#169; 2026 NRdoet &nbsp;&#183;&nbsp; <a href="https://www.nrdoet.nl">nrdoet.nl</a> &nbsp;&#183;&nbsp; <a href="https://www.safetytriggers.nl">safetytriggers.nl</a></p>
 </footer>
 
 <script>
